@@ -1,7 +1,7 @@
 {
-  "name": "isss_webshell",
+  "name": "ksketo.io",
   "version": "1.0.0",
-  "description": "The official website of the Information & Systems Security Society.",
+  "description": "Ksketo.io webpage",
   "dependencies": {
     "gulp-cli": "^1.3.0"
   },
@@ -17,6 +17,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Konstantinos Faliagkas",
   "license": "ISC"
 }
