@@ -28,6 +28,10 @@ pre {
     color: #ea0000;
 }
 
+.yellow {
+    color: #F5D76E;
+}
+
 .pink {
     color: #fd05ff;
 }
@@ -89,11 +93,11 @@ p {
     .bigScreen {
         display: none;
     }
-    
+
     .smallScreen {
         display: block;
     }
-    
+
     div#contentWrapper {
         margin-bottom: 4em;
     }

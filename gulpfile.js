@@ -31,15 +31,10 @@ gulp.task('styles', function () {
         .pipe(cleanCSS())
         .pipe(gulp.dest('dist/'));
 });
- 
+
 gulp.task('html', function (cb) {
     fs.readdir(path.join(__dirname, 'src/data/'), function (err, files) {
         var templateData = {};
-        for (var i = 0; i < files.length; i++) {
-            var baseName = files[i].split('.')[0];
-            templateData[baseName] = require('./src/data/' + files[i]);
-        }
-        
         var options = {
             ignorePartials: true,
             batch: ['./src/partials'],
@@ -50,13 +45,13 @@ gulp.task('html', function (cb) {
 		}
 	    }
         };
-        
+
         gulp.src('src/index.hbs')
             .pipe(handlebars(templateData, options))
             .pipe(htmlmin({ collapseWhitespace: true }))
             .pipe(rename('index.html'))
             .pipe(gulp.dest('dist'));
-        
+
         cb();
     });
 });

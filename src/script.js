@@ -1,6 +1,6 @@
 var main = new Terminator(document.getElementById('contentWrapper'),
             {
-                prefix: '<span class="green">isss@utexas</span>:<span class="red">~$</span> ',
+                prefix: '<span class="green">kostas</span><span class="red">@</span><span class="yellow">Web</span>:<span class="red">~$</span> ',
                 alwaysFocus: true,
                 autoScroll: (window.innerWidth >= 600)
             });
@@ -27,10 +27,9 @@ function printClass(term, className) {
 
 main.register(function(term, command) {
     term.writeLine('welcome.txt');
-    term.writeLine('officers.txt');
     term.writeLine('contact.txt');
-    term.writeLine('sponsor.txt');
-    term.writeLine('nuclear_launch_codes.txt');
+    term.writeLine('help.txt');
+    term.writeLine('git.txt');
     term.prompt();
 }, 'ls');
 
@@ -45,18 +44,6 @@ main.register(function(term, command) {
     term.prompt();
     return;
 }, 'cat');
-
-main.register(function(term, command) {
-	printClass(term, 'officers');
-	term.prompt();
-	return;
-}, 'officers');
-
-main.register(function(term, command) {
-	printClass(term, 'news');
-	term.prompt();
-	return;
-}, ['news', 'new']);
 
 main.register(function(term, command) {
 	printClass(term, 'contact');
@@ -77,34 +64,52 @@ main.register(function(term, command) {
 }, 'git');
 
 main.register(function(term, command) {
-    printClass(term, 'sponsor');
-    term.prompt();
-    return;
-}, ['sponsor', 'sponsors']);
-
-main.register(function(term, command) {
-    term.writeLine('Redirecting to the Facebook group...');
+    term.writeLine('Redirecting to Github...');
     setTimeout(function() {
-        window.location = 'https://www.facebook.com/groups/utisss/';
+        window.location = 'https://github.com/ksketo';
         term.prompt();
     }, 750);
-}, ['fb', 'facebook']);
+}, ['gh', 'github']);
 
 main.register(function(term, command) {
-    term.writeLine('Redirecting to the Careers Masterlist...');
+    term.writeLine('Redirecting to StackOverflow...');
     setTimeout(function() {
-        window.location = 'https://docs.google.com/document/d/18fVI1KxupGfPOG-u31sJsLlTW3M76R5ujRQYODAW1c8/edit';
+        window.location = 'https://stackoverflow.com/users/4619005/kostas';
         term.prompt();
     }, 750);
-}, ['career', 'careers']);
+}, ['so', 'stackoverflow']);
 
 main.register(function(term, command) {
-    term.writeLine('Redirecting to the Security Day Registration...');
+    term.writeLine('Redirecting to Linkedin...');
     setTimeout(function() {
-        window.location = 'https://www.isss.io/register';
+        window.location = 'https://www.linkedin.com/in/konstantinos-faliagkas-6241022a/';
         term.prompt();
     }, 750);
-}, ['register']);
+}, ['linkedin']);
+
+main.register(function(term, command) {
+    term.writeLine('Redirecting to Twitter...');
+    setTimeout(function() {
+        window.location = 'https://twitter.com/kwst_f';
+        term.prompt();
+    }, 750);
+}, ['twitter']);
+
+main.register(function(term, command) {
+    term.writeLine('Redirecting to Steem...');
+    setTimeout(function() {
+        window.location = 'https://steemit.com/@kostas';
+        term.prompt();
+    }, 750);
+}, ['steem']);
+
+main.register(function(term, command) {
+    term.writeLine('Redirecting to AngelList...');
+    setTimeout(function() {
+        window.location = 'https://angel.co/konstantinos-faliagkas';
+        term.prompt();
+    }, 750);
+}, ['angellist']);
 
 main.register(function(term, command) {
     term.writeLine('Redirecting to the mailing list subscription page...');
@@ -115,15 +120,7 @@ main.register(function(term, command) {
 }, ['mail', 'sub', 'subscribe']);
 
 main.register(function(term, command) {
-    term.writeLine('Redirecting to the mailing list unsubscribe page...');
-    setTimeout(function() {
-        window.location = 'https://utlists.utexas.edu/sympa/sigrequest/isss';
-        term.prompt();
-    }, 750);
-}, ['unsub', 'unsubscribe']);
-
-main.register(function(term, command) {
-	term.writeLine('/utexas/utcs/orgs/isss');
+	term.writeLine('/home/kostas');
 	term.prompt();
 }, 'pwd');
 
@@ -138,7 +135,7 @@ main.register(function(term, command) {
 }, 'cd');
 
 main.register(function(term, command) {
-    term.writeLine('isss');
+    term.writeLine('guest');
     term.prompt();
 }, 'whoami');
 
