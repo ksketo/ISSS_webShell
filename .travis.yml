@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-- '8'
+  - '8'
 install:
-- npm install
-- npm install -g gulp-cli
-after_success: gulp
+  - npm install
+  - npm install -g gulp-cli
+script: gulp
 deploy:
   provider: pages
   skip_cleanup: true
