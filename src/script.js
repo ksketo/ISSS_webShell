@@ -62,7 +62,10 @@ main.register(function (term, command) {
 main.register(function (term, command) {
   term.writeLine('Redirecting to Github...')
   setTimeout(function () {
-    window.location = 'https://github.com/ksketo'
+    window.open(
+      'https://github.com/ksketo',
+      '_blank'
+    )
     term.prompt()
   }, 750)
 }, ['gh', 'github'])
@@ -70,7 +73,10 @@ main.register(function (term, command) {
 main.register(function (term, command) {
   term.writeLine('Redirecting to StackOverflow...')
   setTimeout(function () {
-    window.location = 'https://stackoverflow.com/users/4619005/kostas'
+    window.open(
+      'https://stackoverflow.com/users/4619005/kostas',
+      '_blank'
+    )
     term.prompt()
   }, 750)
 }, ['so', 'stackoverflow'])
@@ -78,7 +84,10 @@ main.register(function (term, command) {
 main.register(function (term, command) {
   term.writeLine('Redirecting to Linkedin...')
   setTimeout(function () {
-    window.location = 'https://www.linkedin.com/in/konstantinos-faliagkas-6241022a/'
+    window.open(
+      'https://www.linkedin.com/in/konstantinos-faliagkas-6241022a/',
+      '_blank'
+    )
     term.prompt()
   }, 750)
 }, ['linkedin'])
@@ -86,7 +95,10 @@ main.register(function (term, command) {
 main.register(function (term, command) {
   term.writeLine('Redirecting to Twitter...')
   setTimeout(function () {
-    window.location = 'https://twitter.com/kwst_f'
+    window.open(
+      'https://twitter.com/kwst_f',
+      '_blank'
+    )
     term.prompt()
   }, 750)
 }, ['twitter'])
@@ -94,7 +106,10 @@ main.register(function (term, command) {
 main.register(function (term, command) {
   term.writeLine('Redirecting to Steem...')
   setTimeout(function () {
-    window.location = 'https://steemit.com/@kostas'
+    window.open(
+      'https://steemit.com/@kostas',
+      '_blank'
+    )
     term.prompt()
   }, 750)
 }, ['steem'])
@@ -102,18 +117,13 @@ main.register(function (term, command) {
 main.register(function (term, command) {
   term.writeLine('Redirecting to AngelList...')
   setTimeout(function () {
-    window.location = 'https://angel.co/konstantinos-faliagkas'
+    window.open(
+      'https://angel.co/konstantinos-faliagkas',
+      '_blank'
+    )
     term.prompt()
   }, 750)
 }, ['angellist'])
-
-main.register(function (term, command) {
-  term.writeLine('Redirecting to the mailing list subscription page...')
-  setTimeout(function () {
-    window.location = 'https://utlists.utexas.edu/sympa/subscribe/isss'
-    term.prompt()
-  }, 750)
-}, ['mail', 'sub', 'subscribe'])
 
 main.register(function (term, command) {
   term.writeLine('/home/kostas')
