@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Meslo';
+  src:  url('static/fonts/MesloLGS-Regular.woff2') format('woff2'),
+        url('static/fonts/MesloLGS-Regular.woff') format('woff');
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	background-color: black;
+	color: white;
+	font-size: 1em;
+	font-family: 'Meslo', monospace;
+	font-feature-settings: "liga" 0;
+}
+
+pre {
+    font-family: 'Meslo', monospace;
+}
+
+.green {
+    color: #00ec00;
+}
+
+.red {
+    color: #ea0000;
+}
+
+.yellow {
+    color: #F5D76E;
+}
+
+.pink {
+    color: #fd05ff;
+}
+
+div#contentWrapper {
+    max-width: 80ch;
+    margin: 0 auto;
+}
+
+div#contentWrapper.hacker {
+    color: #00ec00 !important;
+}
+
+div#contentWrapper.hacker * {
+    color: #00ec00 !important;
+}
+
+
+pre.centered {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 3ch;
+    text-indent: -2ch;
+}
+
+ul li::before {
+    content: "* ";
+    display: block;
+    float: left;
+    width: 2ch;
+}
+
+a[onclick] {
+	color: black;
+	background-color: #c0c0c0;
+	text-decoration: none;
+	font-weight: bold;
+	padding-left: .25ch;
+	padding-right: .25ch;
+}
+
+a[target="_blank"], a[href^="mailto:"] {
+    color: #01dfff;
+}
+
+p {
+	margin-top: 0;
+}
+
+.smallScreen {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .bigScreen {
+        display: none;
+    }
+
+    .smallScreen {
+        display: block;
+    }
+
+    div#contentWrapper {
+        margin-bottom: 4em;
+    }
+}
